@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+    background: #f5cdd8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    background: #ffffff;
+    padding: 25px;
+    width: 550px;
+    border-radius: 10px;
+  }
+  .todo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .todo-body {
+    display: flex;
+    background: #edeef0;
+  border-radius: 30px;
+  padding-left: 30px;
+  margin-bottom: 25px;
+  align-items: center;
+ 
+  }
+  .todo-checkbox {
+    height:15px;
+    width: 15px;
+    border-radius: 100%;
+    border: 2px solid #5c5c5c;
+    cursor: pointer;
+    background-color: inherit;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+   
+  }
+  .completed .todo-checkbox{
+    background-color: rgb(241, 78, 129);
+    border: rgb(241, 78, 129);
+  }
+  .todo-body input {
+  
+    background-color: transparent;
+    padding: 15px 6px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  margin-left: 2px;
+ 
+  }
+  
+  .completed .todo-input{
+    text-decoration: line-through;
+    color: rgb(251, 143, 179);
+  }
+
+  .error{
+    color: rgb(247, 53, 53);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    display:none;
+    margin-top: 10px;
+    
+  }
+  .show-error .error{
+    display: block;
+  }
+
+  .progress{
+    height: 100px;
+  }
+  .progress-bar{
+    background-color: rgb(249, 196, 214);
+    height: 30px;
+    width: auto;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+  }
+  .progress-value{
+    background-color: rgb(251, 143, 179);
+    height: 30px;
+    width: 0;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+  .span-text{
+    padding-left: 10px;
+   min-width: max-content;
+   height: 30px;
+   font-size: 13px;
+   align-items: center;
+   padding-top:4px ;
+  }
+  h5 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: green;
+  }
+  
+  .todo-controls {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 768px){
+    .todo-header{
+        font-size: 15px;
+    }
+    .container{
+        width: 300px;
+    }
+    .todo-input{
+        width: 100px;
+    }
+  }
+  
